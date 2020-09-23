@@ -1,9 +1,11 @@
 title: GitHub Pages LilyPond template
 description: >-
   Template used for LilyPond projects on GitHub Pages.
-url: ""
+baseurl: ""
+url: https://jeandeaual.github.io
 repository: jeandeaual/lilypond-jekyll-template
 lang: en-US
+show_downloads: true
 
 # Build settings
 theme: jekyll-theme-minimal
