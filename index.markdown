@@ -33,6 +33,13 @@ layout: default
 {% if svg_files != empty %}
 # Preview
 {% for file in svg_files %}
+{% comment %}
+Check if the basename ends with "-1", then add a title containing the basename without "-1"
+{% endcomment %}
+{% assign suffix = file.basename | slice: -2, 2 %}
+{% if suffix == "-1" %}
+## {{ file.basename | split: "" | reverse | join: "" | remove_first: "1-" | split: "" | reverse | join: "" }}
+{% endif %}
 ![{{ file.basename }}]({{ file.path | relative_url }})
 {% endfor %}
 {% endif %}
