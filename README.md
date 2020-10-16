@@ -5,5 +5,11 @@ This project is meant to be used by [LilyPond](https://lilypond.org/) projects u
 ## Running Locally
 
 ```text
-bundle exec jekyll serve
+bundle exec jekyll serve --livereload
+```
+
+## Build the Site
+
+```text
+bundle exec jekyll build
 ```
