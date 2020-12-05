@@ -8,6 +8,7 @@ layout: default
 {% assign tabloid_files = site.static_files | where: "tabloid", true | where: "extname", ".pdf" | sort: "basename" %}
 {% assign svg_files = site.static_files | where: "svg", true | where: "extname", ".svg" | sort: "basename" %}
 {% assign midi_files = site.static_files | where: "midi", true | where: "extname", ".midi" | sort: "basename" %}
+{% assign video_files = site.static_files | where: "video", true | sort: "basename" %}
 
 # Downloads
 
@@ -78,6 +79,15 @@ layout: default
             {% endif %}
         {% endif %}
 ![{{ file.basename }}]({{ file.path | relative_url }})
+    {% endfor %}
+{% endif %}
+
+{% if video_files != empty %}
+## Video
+    {% for file in video_files %}
+<video title="{{ file.name }}" width="640" height="360" controls>
+  <source type="video/mp4" src="{{ file.path | relative_url }}">
+</video>
     {% endfor %}
 {% endif %}
 

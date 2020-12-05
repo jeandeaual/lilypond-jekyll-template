@@ -34,3 +34,7 @@ defaults:
       path: "midi"
     values:
       midi: true
+  - scope:
+      path: "video"
+    values:
+      video: true
