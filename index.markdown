@@ -81,4 +81,6 @@ layout: default
     {% endfor %}
 {% endif %}
 
+All content on this page is the property of the copyright owner of the original composition.
+
 Last update on {{ site.time | date: "%Y-%m-%d %H:%M UTC" }}.
