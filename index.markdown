@@ -91,6 +91,10 @@ layout: default
     {% endfor %}
 {% endif %}
 
+<br>
+
+{% if site.copyright %}
 All content on this page is the property of the copyright owner of the original composition.
+{% endif %}
 
 Last update on {{ site.time | date: "%Y-%m-%d %H:%M UTC" }}.

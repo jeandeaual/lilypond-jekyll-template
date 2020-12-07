@@ -6,6 +6,7 @@ url: https://jeandeaual.github.io
 repository: jeandeaual/lilypond-jekyll-template
 lang: en-US
 show_downloads: false
+copyright: false
 # Build settings
 theme: jekyll-theme-minimal
 plugins: []
