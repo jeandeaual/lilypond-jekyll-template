@@ -85,7 +85,7 @@ layout: default
 {% if video_files != empty %}
 ## Video
     {% for file in video_files %}
-<video title="{{ file.name }}" width="640" height="360" controls>
+<video title="{{ file.name }}" width="480" height="270" controls>
   <source type="video/mp4" src="{{ file.path | relative_url }}">
   <p><a href="{{ file.path | relative_url }}">{{ file.name }}</a></p>
 </video>
