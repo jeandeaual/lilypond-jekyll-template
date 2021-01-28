@@ -51,7 +51,7 @@ layout: default
 ## Video
 
     {% for file in video_files %}
-### {{ file.basename }}
+### {{ file.basename | title_case }}
 <video title="{{ file.name }}" width="480" height="270" controls>
   <source type="video/mp4" src="{{ file.path | relative_url }}">
   <p><a href="{{ file.path | relative_url }}">{{ file.name }}</a></p>
@@ -81,13 +81,13 @@ layout: default
             If there's a single page, print the title as-is
             {% endcomment %}
             {% unless suffix contains "-" %}
-## {{ file.basename }}
+## {{ file.basename | title_case }}
             {% endunless %}
             {% comment %}
             Check if the basename ends with "-1", then add a title containing the basename without "-1"
             {% endcomment %}
             {% if suffix == "-1" %}
-## {{ file.basename | split: "" | reverse | join: "" | remove_first: "1-" | split: "" | reverse | join: "" }}
+## {{ file.basename | split: "" | reverse | join: "" | remove_first: "1-" | split: "" | reverse | join: "" | title_case }}
             {% endif %}
         {% endif %}
 ![{{ file.basename }}]({{ file.path | relative_url }})
@@ -100,4 +100,4 @@ layout: default
 All content on this page is the property of the copyright owner of the original composition.
 {% endif %}
 
-Last update on {{ site.time | date: "%Y-%m-%d %H:%M UTC" }}.
+Last update {{ site.time | timeago }}.
