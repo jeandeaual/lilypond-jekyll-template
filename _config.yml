@@ -1,4 +1,6 @@
+# Theme settings
 title: GitHub Pages LilyPond template
+short_title: Test
 description: >-
   Template used for LilyPond projects on GitHub Pages.
 baseurl: ""
@@ -7,9 +9,9 @@ repository: jeandeaual/lilypond-jekyll-template
 lang: en-US
 show_downloads: false
 copyright: false
-# Build settings
-theme: jekyll-theme-minimal
-plugins: []
+# Jekyll settings
+plugins:
+  - jekyll-seo-tag
 defaults:
   - scope:
       path: "a4"

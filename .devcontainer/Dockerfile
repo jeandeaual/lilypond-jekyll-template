@@ -1,6 +1,8 @@
 ARG VARIANT=2
 FROM mcr.microsoft.com/vscode/devcontainers/ruby:${VARIANT}
 
+RUN gem install solargraph
+
 # Environment variables required by Jekyll
 ENV LANG="en_US.UTF-8" \
     LANGUAGE="en_US:en" \
