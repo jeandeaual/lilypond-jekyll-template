@@ -7,6 +7,7 @@ baseurl: ""
 url: https://jeandeaual.github.io
 repository: jeandeaual/lilypond-jekyll-template
 lang: en-US
+root_repo_path: /partitions
 copyright: false
 # Jekyll settings
 exclude:
