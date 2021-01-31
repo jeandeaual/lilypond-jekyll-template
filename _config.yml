@@ -28,6 +28,7 @@ exclude:
   - .github/
   - .vscode/
 plugins:
+  - jekyll-github-metadata
   - jekyll-minifier
   - jekyll-seo-tag
   - jekyll-timeago
