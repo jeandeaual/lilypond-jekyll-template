@@ -15,35 +15,35 @@ layout: default
 {% if a4_files != empty %}
 ## A4
     {% for file in a4_files %}
-* [{{ file.name }}]({{ file.path | relative_url }})
+* [{{ file.name }}]({% link {{ file.path }} %})
     {% endfor %}
 {% endif %}
 
 {% if letter_files != empty %}
 ## Letter
     {% for file in letter_files %}
-* [{{ file.name }}]({{ file.path | relative_url }})
+* [{{ file.name }}]({% link {{ file.path }} %})
     {% endfor %}
 {% endif %}
 
 {% if a3_files != empty %}
 ## A3
     {% for file in a3_files %}
-* [{{ file.name }}]({{ file.path | relative_url }})
+* [{{ file.name }}]({% link {{ file.path }} %})
     {% endfor %}
 {% endif %}
 
 {% if tabloid_files != empty %}
 ## Tabloid
     {% for file in tabloid_files %}
-* [{{ file.name }}]({{ file.path | relative_url }})
+* [{{ file.name }}]({% link {{ file.path }} %})
     {% endfor %}
 {% endif %}
 
 {% if midi_files != empty %}
 ## MIDI
     {% for file in midi_files %}
-* [{{ file.name }}]({{ file.path | relative_url }})
+* [{{ file.name }}]({% link {{ file.path }} %})
     {% endfor %}
 {% endif %}
 
@@ -53,8 +53,8 @@ layout: default
     {% for file in video_files %}
 ### {{ file.basename | title_case }}
 <video title="{{ file.name }}" width="480" height="270" controls>
-  <source type="video/mp4" src="{{ file.path | relative_url }}">
-  <p><a href="{{ file.path | relative_url }}">{{ file.name }}</a></p>
+  <source type="video/mp4" src="{% link {{ file.path }} %}">
+  <p><a href="{% link {{ file.path }} %}">{{ file.name }}</a></p>
 </video>
     {% endfor %}
 {% endif %}
@@ -90,7 +90,7 @@ layout: default
 ## {{ file.basename | split: "" | reverse | join: "" | remove_first: "1-" | split: "" | reverse | join: "" | title_case }}
             {% endif %}
         {% endif %}
-![{{ file.basename }}]({{ file.path | relative_url }})
+![{{ file.basename }}]({% link {{ file.path }} %})
     {% endfor %}
 {% endif %}
 
