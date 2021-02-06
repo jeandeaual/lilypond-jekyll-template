@@ -10,6 +10,8 @@ lang: en-US
 root_repo_path: /partitions
 copyright: false
 # Jekyll settings
+include:
+  - .nojekyll
 exclude:
   - config.yml
   - Gemfile
