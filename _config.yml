@@ -4,7 +4,7 @@ short_title: ""
 description: >-
   Template used for LilyPond projects on GitHub Pages.
 baseurl: ""
-url: https://jeandeaual.github.io
+url: https://alexis.jeandeau.fr
 repository: jeandeaual/lilypond-jekyll-template
 lang: en-US
 root_repo_path: /partitions
