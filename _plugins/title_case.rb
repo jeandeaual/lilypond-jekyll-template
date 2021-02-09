@@ -73,6 +73,7 @@ module Jekyll
         elsif word.casecmp('o’clock').zero?
           'O’Clock'
         elsif EXCLUDE_LIST.include?(word) &&
+              previous_word &&
               !(ADVERBS.include?(word.downcase) && VERBS_WITH_ADVERBS.include?(previous_word.downcase))
           word
         else

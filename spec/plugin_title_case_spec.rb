@@ -13,6 +13,8 @@ RSpec.describe Jekyll::TitleCase do
       .to eq('Hello, World!')
     expect(title_case('The quick brown fox jumps over the lazy dog'))
       .to eq('The Quick Brown Fox Jumps Over the Lazy Dog')
+    expect(title_case('the blue hearts'))
+      .to eq('The Blue Hearts')
   end
 
   it 'can capitalize a complex English' do
