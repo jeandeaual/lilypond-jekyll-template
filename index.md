@@ -13,28 +13,28 @@ layout: default
 # Downloads
 
 {% if a4_files != empty %}
-## A4
+## A4 PDF
     {% for file in a4_files %}
 * [{{ file.name }}]({% link {{ file.path }} %})
     {% endfor %}
 {% endif %}
 
 {% if letter_files != empty %}
-## Letter
+## Letter PDF
     {% for file in letter_files %}
 * [{{ file.name }}]({% link {{ file.path }} %})
     {% endfor %}
 {% endif %}
 
 {% if a3_files != empty %}
-## A3
+## A3 PDF
     {% for file in a3_files %}
 * [{{ file.name }}]({% link {{ file.path }} %})
     {% endfor %}
 {% endif %}
 
 {% if tabloid_files != empty %}
-## Tabloid
+## Tabloid PDF
     {% for file in tabloid_files %}
 * [{{ file.name }}]({% link {{ file.path }} %})
     {% endfor %}
