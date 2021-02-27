@@ -11,9 +11,8 @@ See an example [here](https://jeandeaual.github.io/lilypond-allofme).
 
 * [Ruby 2.7](https://www.ruby-lang.org/en/downloads/) needs to be installed
 * Install the Ruby dependencies (the first line is optional):
-    ```text
-    bundle config set without 'development'
-    bundle install --jobs 4 --retry 3
+    ```sh
+    BUNDLE_WITHOUT=development bundle install
     ```
 
 ### Running Locally
